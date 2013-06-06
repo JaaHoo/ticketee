@@ -1,3 +1,4 @@
+<h2>Editing <%= @user.name %></h2>
 <%= form_for @user do |f| %>
 	<% if @user.errors.any? %>
 	<div id="error_explanation">
@@ -9,7 +10,6 @@
 		</ul>
 	</div>
 	<% end %>
-
 	<p>
 		<%= f.label :name, "Username" %><br>
 		<%= f.text_field :name %>
@@ -18,13 +18,5 @@
 		<%= f.label :email %><br>
 		<%= f.text_field :email %>
 	</p>
-	<p>
-		<%= f.label :password %><br>
-		<%= f.password_field :password %>
-	</p>
-	<p>
-		<%= f.label :password_confirmation %><br>
-		<%= f.password_field :password_confirmation %>
-	</p>
-	<%= f.submit "Sign up" %>
+	<%= f.submit "Update Profile" %>
 <% end %>
