@@ -19,8 +19,11 @@ feature "Editing Users" do
 		click_link "Edit Profile"
 
 		fill_in "Username", with: "new_username"
+		fill_in "Email", with: "new_email@example.com"
 		click_button "Update Profile"
 
 		expect(page).to have_content("Profile has been updated.")
+		expect(page).to have_content("new_username")
+		expect(page).to have_content("new_email@example.com")
 	end
 end
