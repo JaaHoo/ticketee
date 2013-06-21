@@ -5,6 +5,8 @@ gem 'rails', '4.0.0.beta1'
 
 gem 'sqlite3'
 
+gem 'cancan', '1.6.9'
+
 group :test, :development do
 	gem 'rspec-rails', "~> 2.12"
 end
