@@ -1,11 +1,16 @@
 Ticketee::Application.routes.draw do
   namespace :admin do
     root to: "base#index"
-    resources :users
+    resources :users do
+      resources :permissions
+
+      put "permissions", to: "permissions#set", as: "set_permissions"
+    end
   end
   
   get '/signin', to: "sessions#new", as: "signin"
   post '/signin', to: "sessions#create", as: "signin"
+  delete '/signout', to: "sessions#destroy", as: "signout"
 
   resources :projects do
     resources :tickets
