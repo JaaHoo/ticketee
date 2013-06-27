@@ -7,6 +7,8 @@ gem 'sqlite3'
 
 gem 'cancan', '1.6.9'
 
+gem 'carrierwave', '0.8.0'
+
 group :test, :development do
 	gem 'rspec-rails', "~> 2.12"
 end
